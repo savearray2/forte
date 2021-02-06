@@ -1,6 +1,6 @@
 {
 	"name": "@savearray2/forte",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Email Address validation library, based on rfc 2822 and rfc 6532.",
 	"main": "index.js",
 	"scripts": {
