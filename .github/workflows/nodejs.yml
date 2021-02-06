@@ -4,6 +4,13 @@ jobs:
   build:
     name: Build & Test
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version:
+          - 15
+          - 14
+          - 12
     steps:
       - uses: actions/checkout@v2
       - name: Test

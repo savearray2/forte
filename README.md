@@ -1,5 +1,9 @@
 # forte
 
+[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
+[![MIT license](https://img.shields.io/npm/l/@savearray2/forte?color=blue)](https://en.wikipedia.org/wiki/MIT_License)
+[![npm](https://img.shields.io/npm/v/@savearray2/forte)](https://www.npmjs.com/package/@savearray2/forte)
+
 Parser for RFC-2822/RFC-6532 email addresses.
 
 This library's sole purpose is to validate email addresses, and email addresses only (including esoteric ones!). It can be used in the browser or from within Node.js. Special care has been taken to ensure strange email addresses can be validated successfully.
