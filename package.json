@@ -1,0 +1,106 @@
+{
+	"name": "@savearray2/forte",
+	"version": "0.1.0",
+	"description": "Email Address validation library, based on rfc 2822 and rfc 6532.",
+	"main": "index.js",
+	"scripts": {
+		"pegjs": "node_modules/pegjs/bin/pegjs -o lib/parser.js email.pegjs",
+		"xo": "node_modules/xo/cli.js !parser.js",
+		"mocha": "node_modules/nyc/bin/nyc.js mocha",
+		"test": "npm run pegjs && npm run xo && npm run mocha",
+		"browserify": "node_modules/browserify/bin/cmd.js entry.js -o build/forte.js",
+		"babel": "node_modules/.bin/babel build/forte.js -o browser/forte.min.js",
+		"clean": "rm -rf build",
+		"build": "npm run pegjs && npm run xo && npm run browserify && npm run babel && npm run clean"
+	},
+	"keywords": [
+		"rfc2822",
+		"rfc6532",
+		"email",
+		"address",
+		"mail",
+		"verification"
+	],
+	"author": "savearray2",
+	"license": "MIT",
+	"dependencies": {
+		"punycode": "^2.1.1"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.12.13",
+		"@babel/core": "^7.12.13",
+		"@babel/preset-env": "^7.12.13",
+		"babel-preset-minify": "^0.5.1",
+		"babelify": "^10.0.0",
+		"browserify": "^17.0.0",
+		"chai": "^4.3.0",
+		"eslint": "^7.19.0",
+		"eslint-config-airbnb-base": "^14.2.1",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-unicorn": "^27.0.0",
+		"libxmljs": "^0.19.7",
+		"mocha": "^8.2.1",
+		"nyc": "^15.1.0",
+		"pegjs": "^0.10.0",
+		"xo": "^0.37.1"
+	},
+	"xo": {
+		"extends": "airbnb-base",
+		"rules": {
+			"spaced-comment": 0,
+			"semi": [
+				"error",
+				"never"
+			],
+			"no-mixed-spaces-and-tabs": 1,
+			"no-tabs": 0,
+			"indent": [
+				"error",
+				"tab"
+			],
+			"no-underscore-dangle": 0,
+			"comma-dangle": 0,
+			"import/order": [
+				0
+			],
+			"class-methods-use-this": 0,
+			"arrow-parens": 0,
+			"no-use-before-define": [
+				"error",
+				{
+					"functions": false,
+					"classes": false,
+					"variables": true
+				}
+			],
+			"quotes": 0,
+			"operator-linebreak": [
+				"error",
+				"after"
+			],
+			"camelcase": 0,
+			"no-plusplus": [
+				"error",
+				{
+					"allowForLoopAfterthoughts": true
+				}
+			],
+			"promise/prefer-await-to-then": 0,
+			"unicorn/catch-error-name": [
+				"error",
+				{
+					"name": "err"
+				}
+			],
+			"linebreak-style": [
+				"error",
+				"unix"
+			],
+			"unicorn/prevent-abbreviations": 0,
+			"max-len": 0,
+			"no-restricted-syntax": 0,
+			"unicorn/prefer-optional-catch-binding": 0,
+			"no-control-regex": 0
+		}
+	}
+}
