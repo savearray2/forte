@@ -26,6 +26,11 @@
 	"dependencies": {
 		"punycode": "^2.1.1"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/savearray2/forte.git"
+	},
+	"homepage": "https://github.com/savearray2/forte",
 	"devDependencies": {
 		"@babel/cli": "^7.12.13",
 		"@babel/core": "^7.12.13",
