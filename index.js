@@ -111,7 +111,7 @@ class Forte {
 	 * 	to be local (no TLD).
 	 * @param {boolean} [params.reject_ip=false]
 	 * 	Rejects any address whose domain is determined
-	 * 	to be an IP literal (an Ipv4 or IPv6 address).
+	 * 	to be an IP literal (an IPv4 or IPv6 address).
 	 * @returns {EmailAddress|null}
 	 * 	An object representing parsed address information
 	 * 	or null if the address could not be parsed or was rejected.

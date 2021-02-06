@@ -53,8 +53,8 @@ const parsed_email = Forte.parse_email('email@domain.com')
 * `opts: object` with the following options:
 	* `reject_quoted_string: bool` - Rejects any address whose local part a quoted string. Default: `false`.
 	* `reject_comments: bool` - Rejects any address whose local part or domain contains comments. Default: `false`.
-	* `reject_local: bool` - Rejects any address whose domain is determined to be an IP literal (an Ipv4 or IPv6 address). Default: `false`.
-	* `reject_ip: bool` - Rejects any address whose domain is determined to be an IP literal (an Ipv4 or IPv6 address). Default: `false`.
+	* `reject_local: bool` - Rejects any address whose domain is determined to be local (no TLD). Default: `false`.
+	* `reject_ip: bool` - Rejects any address whose domain is determined to be an IP literal (an IPv4 or IPv6 address). Default: `false`.
 
 Returns `null`, if invalid address. Otherwise, returns an `EmailAddress` object with email address information:
 
