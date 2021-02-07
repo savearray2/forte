@@ -17,6 +17,10 @@ disposable.style.email.with+symbol@example.com
 " "@example.org
 "john..doe"@example.org
 email@ドメイン.com
+someone@local
+ip@22.33.44.55
+ipv4@[11.22.33.44]
+ipv6@[IPv6:::1]
 ```
 
 A wide array of test vectors can be found in the project test files.
