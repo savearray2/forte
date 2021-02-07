@@ -49,6 +49,23 @@ const parsed_email = Forte.parse_email('email@domain.com')
 }
 ```
 
+### Browser
+
+```html
+<html>
+  <head>
+    <script src="https://www.unpkg.com/@savearray2/forte/browser/forte.min.js"></script>
+  </head>
+  <body>
+    <div id="email"></div>
+    <script>
+      document.getElementById('email').innerText =
+        Forte.parse_email(" test @ example.com ").safe_address;
+    </script>
+  </body>
+</html>
+```
+
 ## API
 
 ### `Forte.parse_email(addr, [opts])`
